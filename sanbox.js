@@ -82,3 +82,41 @@ const mathOperations = {
 console.log(mathOperations.add(5, 9)); // 
 console.log(mathOperations.subtract(5, 0)); // 
 
+
+//function and foreach 
+//1. Write a Function to Double the Numbers:
+// Write a function called doubleNumbers that takes an 
+// array of numbers as input and doubles each number
+//  using the forEach method.
+
+
+const numbers = [1, 2, 3, 4, 5];
+
+const doubleNumbers = (numbers) => {
+    // numbers.forEach(function(num) {
+    //     console.log(num*2); 
+    // }) 
+
+    numbers.forEach((num) => {
+        console.log(num*2); 
+    })
+}
+ 
+doubleNumbers(numbers); // Output should be [2, 4, 6, 8, 10]
+
+
+// 2. Write a Function to Square the Numbers:Write a function called squareNumbers that takes an array of numbers as 
+// input and squares each number using the forEach method.
+
+const squareNumbers = (numbers2) => {
+    numbers2.forEach((num, index) => {
+        numbers2[index] = num * num; 
+    });
+    return numbers2;
+}
+
+const numbers2 = [1, 2, 3, 4, 5];
+const result = squareNumbers(numbers2); // Output should be [1, 4, 9, 16, 25]
+result.forEach((i, index) => {
+    console.log( index, i)
+}) 
